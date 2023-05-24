@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="Home"
+        android:id="@+id/nav_main"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_home_24"
+        app:cnb_backgroundColor="@color/white"
+        app:cnb_iconColor="@color/green_effective"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="@color/green_effective" />
+
+    <item
+        android:title="Đơn của tôi"
+        android:id="@+id/nav_applications"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_work_outline_24"
+        app:cnb_backgroundColor="@color/white"
+        app:cnb_iconColor="@color/green_effective"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="@color/green_effective"
+        />
+<!--    <item-->
+<!--        android:id="@+id/nav_saved"-->
+<!--        android:title="Công việc đã lưu"-->
+<!--        android:enabled="true"-->
+<!--        android:icon="@drawable/ic_baseline_saved_search_24"-->
+<!--        app:cnb_backgroundColor="@color/white"-->
+<!--        app:cnb_iconColor="@color/green_effective"-->
+<!--        app:cnb_iconTintMode="src_in"-->
+<!--        app:cnb_textColor="@color/green_effective"-->
+<!--        />-->
+
+    <item
+        android:title="Hồ sơ cá nhân"
+        android:id="@+id/nav_profile"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_person_outline_24"
+        app:cnb_backgroundColor="@color/white"
+        app:cnb_iconColor="@color/green_effective"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="@color/green_effective"
+        />
+
+</menu>

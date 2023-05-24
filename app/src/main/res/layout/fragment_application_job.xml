@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white_grey">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/businessHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/companyLogo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="5dp"
+                android:src="@mipmap/iconcompany" />
+
+            <LinearLayout
+                android:layout_marginStart="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvCompany"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Company Name"
+                    android:textSize="10sp"/>
+
+                <TextView
+                    android:id="@+id/tvPositionHiring"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Job Position"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/tvJobDateCreated"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="dateCreated"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp">
+
+        <LinearLayout
+            android:id="@+id/ResumeUpload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal"
+            android:background="@color/white">
+
+
+            <LinearLayout
+                android:layout_marginStart="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
+
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Upload your own CV"
+                    android:textSize="11sp"/>
+
+                <Button
+                    android:id="@+id/btnUploadCV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Upload CV"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <ScrollView
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="8dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linear1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="Fullname"/>
+
+                    <EditText
+                        android:id="@+id/etApplicantName"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="First name" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="Address"/>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/etApplicantAddr"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="Address" />
+                        <EditText
+                            android:id="@+id/etApplicantAddr2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="Address" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="Email"/>
+
+                    <EditText
+                        android:id="@+id/etApplicantEmail"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Email " />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="Phone"/>
+
+                    <EditText
+                        android:id="@+id/etApplicantPhone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="+84" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="Message"/>
+
+                    <EditText
+                        android:id="@+id/etApplicantMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:inputType="textLongMessage"
+                        android:text="Message to Employer" />
+                </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="horizontal"
+                   android:layout_gravity="center_horizontal">
+
+                   <Button
+                       android:id="@+id/btnSubmitApplication"
+                       android:layout_width="fill_parent"
+                       android:layout_height="wrap_content"
+                       android:text="Submit"/>
+               </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

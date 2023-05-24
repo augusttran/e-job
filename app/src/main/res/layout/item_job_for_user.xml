@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:padding="12dp">
+
+    <ImageView
+        android:id="@+id/photoPreview_user"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:padding="5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/common_google_signin_btn_icon_dark_focused" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="4dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvJobPosition_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{job.jobTitle}"
+            android:textColor="@android:color/background_dark"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="2dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_marginBottom="2dp">
+
+            <TextView
+                android:id="@+id/tvEmployer_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{job.employerName}"
+                android:textColor="@android:color/background_dark"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvDaysAgo_user"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@{job.jobDeadline} days ago"
+                android:textColor="@android:color/background_dark"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="2dp">
+
+            <ImageView
+                android:id="@+id/iconLocation_user"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginEnd="1dp"
+                android:padding="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginLeft="2dp"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/pin"/>
+
+            <TextView
+                android:id="@+id/tvJobLocation_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@{job.jobLocation}"
+                android:textColor="@android:color/background_dark"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+

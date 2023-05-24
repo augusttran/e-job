@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">eJob</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <!-- String for registration -->
+    <string name="em">Email</string>
+    <string name="acc_regis">Đăng ký tài khoản</string>
+    <string name="pwd">Mật khẩu</string>
+    <string name="addr">Địa chỉ</string>
+    <string name="phone">Số điện thoại</string>
+    <string name="indsutry">Lĩnh vực</string>
+    <string name="acc_create">Tạo tài khoản</string>
+
+    <string name="cinfo">Thông tin công ty</string>
+    <string name="companyname">Tên công ty</string>
+    <string name="yearfounded">Năm thành lập</string>
+    <string name="acc_regiscompany">Đăng ký tài khoản công ty</string>
+
+    <string name="valid_email_pls">Hãy nhập một email hợp lệ.</string>
+    <string name="email_sent">Một email xác nhận đã được gửi đến hộp thư của bạn. </string>
+
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+</resources>

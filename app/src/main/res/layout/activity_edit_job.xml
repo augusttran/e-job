@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.employer.AddJob">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="2dp"
+        android:background="@color/white_grey">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingVertical="9dp">
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_gravity="center_horizontal"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/navy_100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CHÍNH SỬA CÔNG VIỆC" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                app:strokeWidth="0.5dp"
+                app:strokeColor="#f1f1f1"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingVertical="10dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:boxCornerRadiusBottomEnd="13dp"
+                        app:boxCornerRadiusBottomStart="13dp"
+                        app:boxCornerRadiusTopEnd="13dp"
+                        app:boxCornerRadiusTopStart="13dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:startIconDrawable="@drawable/ic_baseline_calendar_today_24"
+                        android:hint="Thay đổi trạng thái công việc">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/autoComplete1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:inputType="none"
+                            android:layout_gravity="center_vertical"
+                            android:textColorHint="@color/text_gray"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/navy_100"
+                            android:background="@color/white" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <RelativeLayout
+                        android:layout_marginTop="13dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/etJobID"
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:src="@drawable/ic_baseline_confirmation_number_24"
+                            app:tint="@color/text_gray"/>
+
+                        <TextView
+                            android:layout_toEndOf="@id/etJobID"
+                            android:id="@+id/jobID"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="ID công việc"
+                            android:layout_marginStart="5dp"
+                            android:textStyle=""/>
+
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/etJobIDEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:textSize="13sp"
+                        android:padding="10dp"
+                        android:enabled="false"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:inputType="numberSigned"
+                        android:textStyle="bold"
+                        android:textColor="@color/navy_100"
+                        android:hint="342451" />
+
+                    <RelativeLayout
+                        android:layout_marginTop="13dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/fullname"
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:src="@drawable/ic_baseline_person_outline_24"
+                            app:tint="@color/text_gray"/>
+
+                        <TextView
+                            android:layout_toEndOf="@id/fullname"
+                            android:id="@+id/tvSoluongcantuyen"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Số lượng nhân viên cần tuyển"
+                            android:layout_marginStart="5dp"
+                            android:textStyle=""/>
+
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/etNumApplicant"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:textSize="13sp"
+                        android:padding="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:inputType="numberSigned"
+                        android:textStyle="bold"
+                        android:textColor="@color/navy_100"
+                        android:hint="3" />
+
+<!--                    <RelativeLayout-->
+<!--                        android:layout_marginTop="13dp"-->
+<!--                        android:layout_marginStart="10dp"-->
+<!--                        android:layout_marginEnd="10dp"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/jobtype"-->
+<!--                            android:layout_width="17dp"-->
+<!--                            android:layout_height="17dp"-->
+<!--                            android:src="@drawable/ic_baseline_access_time_24"-->
+<!--                            app:tint="@color/text_gray"/>-->
+
+<!--                        <TextView-->
+<!--                            android:layout_toEndOf="@id/jobtype"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Job Type"-->
+<!--                            android:layout_marginStart="5dp"/>-->
+
+<!--                    </RelativeLayout>-->
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:boxCornerRadiusBottomEnd="13dp"
+                        app:boxCornerRadiusBottomStart="13dp"
+                        app:boxCornerRadiusTopEnd="13dp"
+                        app:boxCornerRadiusTopStart="13dp"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:startIconDrawable="@drawable/ic_baseline_access_time_24"
+                        android:hint="Lựa chọn loại hình công việc">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/autoComplete"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:inputType="none"
+                            android:layout_gravity="center_vertical"
+                            android:textColorHint="@color/text_gray"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/navy_100"
+                            android:background="@color/white" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <RelativeLayout
+                        android:layout_marginTop="13dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/jobtype1"
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:src="@drawable/ic_baseline_work_outline_24"
+                            app:tint="@color/text_gray"/>
+
+                        <TextView
+                            android:layout_toEndOf="@id/jobtype1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Vị trí cần tuyển"
+                            android:layout_marginStart="5dp"/>
+
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/etTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:padding="10dp"
+                        android:textSize="13sp"
+                        android:textColor="@color/navy_100"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:inputType="textPersonName"
+                        android:textStyle="bold"
+                        android:hint="Developer" />
+
+                    <RelativeLayout
+                        android:layout_marginTop="13dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/jobtype2"
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:src="@drawable/ic_baseline_description_24"
+                            app:tint="@color/text_gray"/>
+
+                        <TextView
+                            android:layout_toEndOf="@id/jobtype2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mô tả công việc"
+                            android:layout_marginStart="5dp"/>
+
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/etDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:maxLines="65"
+                        android:textSize="13sp"
+                        android:textColor="@color/navy_100"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:textStyle="bold"
+                        android:overScrollMode="always"
+                        android:scrollbarStyle="insideInset"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:hint="This position requires coding."
+                        android:scrollHorizontally="false"
+                        android:scrollbars="vertical"
+                        android:padding="5dp"
+                        android:paddingVertical="10dp"
+                        />
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:boxCornerRadiusBottomEnd="13dp"
+                        app:boxCornerRadiusBottomStart="13dp"
+                        app:boxCornerRadiusTopEnd="13dp"
+                        app:boxCornerRadiusTopStart="13dp"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:startIconDrawable="@drawable/ic_baseline_access_time_24"
+                        android:hint="Lựa chọn yêu cầu về CV">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/autoComplete_cv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:inputType="none"
+                            android:layout_gravity="center_vertical"
+                            android:textColorHint="@color/text_gray"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/navy_100"
+                            android:background="@color/white" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <RelativeLayout
+                        android:layout_marginTop="13dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/jobtype4"
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:src="@drawable/ic_baseline_location_on_24"
+                            app:tint="@color/text_gray"/>
+
+                        <TextView
+                            android:layout_toEndOf="@id/jobtype4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Địa điểm làm việc"
+                            android:layout_marginStart="5dp"/>
+
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/etLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:padding="10dp"
+                        android:textSize="13sp"
+                        android:textColor="@color/navy_100"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:inputType="textPersonName"
+                        android:textStyle="bold"
+                        android:hint="Ho Chi Minh" />
+
+                    <RelativeLayout
+                        android:layout_marginTop="13dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/jobtype5"
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:src="@drawable/ic_baseline_attach_money_24"
+                            app:tint="@color/text_gray"/>
+
+                        <TextView
+                            android:layout_toEndOf="@id/jobtype5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mức lương"
+                            android:layout_marginStart="5dp"/>
+
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/etSalary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:padding="10dp"
+                        android:textSize="13sp"
+                        android:enabled="true"
+                        android:textColor="@color/navy_100"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:inputType="textPersonName"
+                        android:textStyle="bold"
+                        android:hint="10000000" />
+
+                    <RelativeLayout
+                        android:layout_marginTop="13dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/jobtype6"
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:src="@drawable/ic_baseline_business_24"
+                            app:tint="@color/text_gray"/>
+
+                        <TextView
+                            android:layout_toEndOf="@id/jobtype6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tên công ty"
+                            android:layout_marginStart="5dp"/>
+
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/etEmployername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:padding="10dp"
+                        android:textSize="13sp"
+                        android:enabled="false"
+                        android:textColor="@color/navy_100"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:inputType="textPersonName"
+                        android:textStyle="bold"
+                        android:hint="Company ABC" />
+
+                    <RelativeLayout
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/jobtype7"
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:src="@drawable/ic_baseline_calendar_today_24"
+                            app:tint="@color/text_gray"/>
+
+                        <TextView
+                            android:layout_toEndOf="@id/jobtype7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Ngày hết hạn ứng tuyển"
+                            android:layout_marginStart="5dp"/>
+
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/etDeadlineJob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:padding="10dp"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:cursorVisible="false"
+                        android:focusableInTouchMode="false"
+                        android:textColor="@color/navy_100"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:inputType="datetime"
+                        android:hint="Ngày hết hạn ứng tuyển"/>
+
+                    <RelativeLayout
+                        android:layout_marginTop="13dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/jobtype8"
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:src="@drawable/ic_baseline_today_24"
+                            app:tint="@color/text_gray"/>
+
+                        <TextView
+                            android:layout_toEndOf="@id/jobtype8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Update Date"
+                            android:layout_marginStart="5dp"/>
+
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/etDateUpdate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:textSize="13sp"
+                        android:textColor="@color/navy_100"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:inputType="textPersonName"
+                        android:hint="24/07/2021" />
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <Button
+                android:id="@+id/btnEdit"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="60dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:text="Cập nhật Công việc" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

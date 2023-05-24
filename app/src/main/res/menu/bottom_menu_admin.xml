@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<!--    <item-->
+<!--        android:title="Trang chủ"-->
+<!--        android:id="@+id/nav_admin_main"-->
+<!--        android:enabled="true"-->
+<!--        android:icon="@drawable/ic_baseline_home_24"-->
+<!--        app:cnb_backgroundColor="@color/white"-->
+<!--        app:cnb_iconColor="@color/teal_200"-->
+<!--        app:cnb_iconTintMode="src_in"-->
+<!--        app:cnb_textColor="@color/teal_200" />-->
+
+    <item
+        android:title="Nhà tuyển dụng"
+        android:id="@+id/nav_employer_acc"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_business_24"
+        app:cnb_backgroundColor="@color/white"
+        app:cnb_iconColor="@color/teal_200"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="@color/teal_200"
+        />
+
+    <item
+        android:title="Ứng viên"
+        android:id="@+id/nav_usr_acc"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_person_outline_24"
+        app:cnb_backgroundColor="@color/white"
+        app:cnb_iconColor="@color/teal_200"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="@color/teal_200"
+        />
+
+</menu>
