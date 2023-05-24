@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="5dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="0dp"
+    app:strokeColor="#f1f1f1"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:orientation="vertical"
+        android:padding="2dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <LinearLayout
+                    android:id="@+id/topPart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:orientation="vertical"
+                    android:padding="2dp">
+
+                    <TextView
+                        android:id="@+id/applicationName1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:paddingVertical="2dp"
+                        android:textAlignment="center"
+                        android:text="Đơn ứng tuyển cho vị trí"
+                        android:textColor="@color/text_gray"
+
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/applicationStatus"
+                        android:text="SUBMITTED"
+                        android:layout_marginTop="1dp"
+                        android:textColor="@color/navy_100"
+                        android:textStyle="bold"
+                        android:textSize="11sp"
+                        android:paddingEnd="6dp"
+                        android:paddingTop="2dp"
+                        android:paddingStart="6dp"
+                        android:paddingBottom="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16sp"
+                        android:layout_marginEnd="16sp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/application_status_submitted"
+                        android:gravity="center_horizontal"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+
+                        <!--                <com.google.android.material.card.MaterialCardView-->
+                        <!--                    android:id="@+id/photoPreviewLayout"-->
+                        <!--                    android:layout_width="65dp"-->
+                        <!--                    android:layout_height="80dp"-->
+                        <!--                    android:layout_gravity="center_vertical"-->
+                        <!--                    android:layout_marginStart="15dp"-->
+                        <!--                    android:src="@mipmap/ic_launcher_round"-->
+                        <!--                    app:cardCornerRadius="8dp"-->
+                        <!--                    app:cardElevation="0dp"-->
+                        <!--                    app:strokeColor="#f1f1f1"-->
+                        <!--                    app:strokeWidth="0.5dp">-->
+
+                        <!--                    <ImageView-->
+                        <!--                        android:id="@+id/photoPreview"-->
+                        <!--                        android:layout_width="match_parent"-->
+                        <!--                        android:layout_height="match_parent"-->
+                        <!--                        android:layout_gravity="center_vertical"-->
+                        <!--                        android:layout_margin="5dp"-->
+                        <!--                        android:scaleType="centerInside"-->
+                        <!--                        tools:ignore="UnusedAttribute" />-->
+
+                        <!--                    <com.facebook.shimmer.ShimmerFrameLayout-->
+                        <!--                        android:id="@+id/progress"-->
+                        <!--                        android:layout_width="match_parent"-->
+                        <!--                        android:layout_height="match_parent"-->
+                        <!--                        android:orientation="vertical">-->
+
+                        <!--                        <View-->
+                        <!--                            android:layout_width="90dp"-->
+                        <!--                            android:layout_height="90dp"-->
+                        <!--                            android:layout_gravity="center"-->
+                        <!--                            android:background="@mipmap/ic_launcher_round"-->
+                        <!--                            android:gravity="center" />-->
+                        <!--                    </com.facebook.shimmer.ShimmerFrameLayout>-->
+
+                        <!--                </com.google.android.material.card.MaterialCardView>-->
+
+                        <LinearLayout
+                            android:id="@+id/linear1"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="15dp"
+                            android:paddingBottom="15dp"
+                            android:paddingTop="5dp"
+                            android:layout_marginVertical="1sp"
+                            android:layout_toEndOf="@id/photoPreviewLayout"
+                            android:orientation="vertical">
+
+
+
+
+                            <RelativeLayout
+                                android:id="@+id/apName"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="11dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/applicantName3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="3dp"
+                                    android:ellipsize="end"
+                                    android:maxLines="2"
+                                    android:text="Tony Stark"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/navy_100"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/txtInputlayout"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                app:boxCornerRadiusBottomEnd="13dp"
+                                app:boxCornerRadiusBottomStart="13dp"
+                                app:boxCornerRadiusTopEnd="13dp"
+                                app:boxCornerRadiusTopStart="13dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:startIconDrawable="@drawable/ic_baseline_calendar_today_24"
+                                android:hint="Thay đổi tình trạng đơn ứng tuyển">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/user_thaydoi_trangthai"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:enabled="false"
+                                    android:inputType="none"
+                                    android:layout_gravity="center_vertical"
+                                    android:textColorHint="@color/text_gray"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/navy_100"
+                                    android:background="@color/white" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <RelativeLayout
+                                android:layout_marginTop="7dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp">
+
+                                <ImageView
+                                    android:id="@+id/lam111"
+                                    android:layout_width="15dp"
+                                    android:layout_height="16sp"
+                                    android:layout_marginEnd="5dp"
+                                    android:src="@drawable/ic_baseline_insert_drive_file_24"
+                                    app:tint="@color/text_gray" />
+
+                                <TextView
+                                    android:layout_marginTop="2dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@id/lam111"
+                                    android:ellipsize="end"
+                                    android:singleLine="true"
+                                    android:text="ID đơn ứng tuyển"
+                                    android:textColor="@color/text_gray"
+                                    android:textSize="14sp" />
+
+
+                            </RelativeLayout>
+                            <TextView
+                                android:id="@+id/etMadonungtuyen"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:textColor="@color/navy_100"
+                                android:textStyle="bold"
+                                android:text="Van Lang university"/>
+
+                            <RelativeLayout
+                                android:layout_marginTop="4dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp">
+
+                                <ImageView
+                                    android:id="@+id/locIcon8"
+                                    android:layout_width="15dp"
+                                    android:layout_height="16sp"
+                                    android:layout_marginEnd="5dp"
+                                    android:src="@drawable/ic_baseline_calendar_today_24"
+                                    app:tint="@color/text_gray" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@id/locIcon8"
+                                    android:ellipsize="end"
+                                    android:singleLine="true"
+                                    android:text="Ngày tạo"
+                                    android:textColor="@color/text_gray"
+                                    android:textSize="14sp" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/etNgaytaodon"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:textColor="@color/navy_100"
+                                android:textStyle="bold"
+                                android:text="02840284084"/>
+
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp">
+
+                                <ImageView
+                                    android:id="@+id/lampIcon"
+                                    android:layout_width="15dp"
+                                    android:layout_height="16sp"
+                                    android:layout_marginEnd="5dp"
+                                    android:src="@drawable/ic_baseline_school_24"
+                                    app:tint="@color/text_gray" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@id/lampIcon"
+                                    android:ellipsize="end"
+                                    android:singleLine="true"
+                                    android:text="Trường ĐH/ Cao đẳng"
+                                    android:textColor="@color/text_gray"
+                                    android:textSize="14sp" />
+
+
+                            </RelativeLayout>
+                            <TextView
+                                android:id="@+id/lamp"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:textColor="@color/navy_100"
+                                android:textStyle="bold"
+                                android:text="Van Lang university"/>
+
+                            <RelativeLayout
+                                android:layout_marginTop="4dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp">
+
+                                <ImageView
+                                    android:id="@+id/locIcon3"
+                                    android:layout_width="15dp"
+                                    android:layout_height="16sp"
+                                    android:layout_marginEnd="5dp"
+                                    android:src="@drawable/common_full_open_on_phone"
+                                    app:tint="@color/text_gray" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@id/locIcon3"
+                                    android:ellipsize="end"
+                                    android:singleLine="true"
+                                    android:text="Số di động"
+                                    android:textColor="@color/text_gray"
+                                    android:textSize="14sp" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/apPhone"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:textColor="@color/navy_100"
+                                android:textStyle="bold"
+                                android:text="02840284084"/>
+
+                            <RelativeLayout
+                                android:layout_marginTop="4dp"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp">
+
+                                <ImageView
+                                    android:id="@+id/locIcon"
+                                    android:layout_width="15dp"
+                                    android:layout_height="16sp"
+                                    android:layout_marginEnd="5dp"
+                                    android:src="@drawable/ic_baseline_location_on_24"
+                                    app:tint="@color/text_gray" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@id/locIcon"
+                                    android:ellipsize="end"
+                                    android:singleLine="true"
+                                    android:text="Địa chỉ nhà"
+                                    android:textColor="@color/text_gray"
+                                    android:textSize="14sp" />
+                            </RelativeLayout>
+                            <TextView
+                                android:id="@+id/address"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:textColor="@color/navy_100"
+                                android:textStyle="bold"
+                                android:text="225 CMT8, P8, Q.3, TPHCM"/>
+
+                            <RelativeLayout
+                                android:layout_marginTop="4dp"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp">
+
+                                <ImageView
+                                    android:id="@+id/locIcon1"
+                                    android:layout_width="15dp"
+                                    android:layout_height="16sp"
+                                    android:layout_marginEnd="5dp"
+                                    android:src="@drawable/ic_baseline_alternate_email_24"
+                                    app:tint="@color/text_gray" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@id/locIcon1"
+                                    android:ellipsize="end"
+                                    android:singleLine="true"
+                                    android:text="Email"
+                                    android:textColor="@color/text_gray"
+                                    android:textSize="14sp" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/apEmail"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:textColor="@color/navy_100"
+                                android:textStyle="bold"
+                                android:text="abcxyz@gmail.com"/>
+
+                            <RelativeLayout
+                                android:layout_marginTop="4dp"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp">
+
+                                <ImageView
+                                    android:id="@+id/locIcon2"
+                                    android:layout_width="15dp"
+                                    android:layout_height="16sp"
+                                    android:layout_marginEnd="5dp"
+                                    android:src="@drawable/ic_baseline_facebook_24"
+                                    app:tint="@color/text_gray" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@id/locIcon2"
+                                    android:ellipsize="end"
+                                    android:singleLine="true"
+                                    android:text="Tài khoản MXH"
+                                    android:textColor="@color/text_gray"
+                                    android:textSize="14sp" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/apSocial"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:textColor="@color/navy_100"
+                                android:textStyle="bold"
+                                android:text="github.com/thytran38"/>
+
+                            <RelativeLayout
+                                android:layout_marginTop="4dp"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp">
+
+                                <ImageView
+                                    android:id="@+id/locIcon5"
+                                    android:layout_width="15dp"
+                                    android:layout_height="16sp"
+                                    android:layout_marginEnd="5dp"
+                                    android:src="@drawable/ic_baseline_portrait_24"
+                                    app:tint="@color/text_gray" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@id/locIcon5"
+                                    android:ellipsize="end"
+                                    android:singleLine="true"
+                                    android:text="Mô tả cá nhân"
+                                    android:textColor="@color/text_gray"
+                                    android:textSize="14sp" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/apSelfdescription"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:textColor="@color/navy_100"
+                                android:textStyle="bold"
+                                android:text="Learning new things"/>
+
+                            <RelativeLayout
+                                android:layout_marginTop="4dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp">
+
+                                <ImageView
+                                    android:id="@+id/locIcon4"
+                                    android:layout_width="15dp"
+                                    android:layout_height="16sp"
+                                    android:layout_marginEnd="5dp"
+                                    android:src="@drawable/ic_baseline_picture_as_pdf_24"
+                                    app:tint="@color/text_gray" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:layout_toEndOf="@id/locIcon4"
+                                    android:ellipsize="end"
+                                    android:singleLine="true"
+                                    android:text="CV của ứng viên"
+                                    android:textColor="@color/text_gray"
+                                    android:textSize="14sp" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/cvView"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:textColor="@color/navy_100"
+                                android:textStyle="bold"
+                                android:clickable="true"
+                                android:text="firebase.google.com/vnnn..." />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center">
+
+
+                                <Button
+                                    android:id="@+id/btnHuy"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/btn_round_green_selector"
+                                    android:textAllCaps="false"
+                                    android:textStyle="bold"
+                                    android:textSize="12sp"
+                                    android:layout_marginVertical="7dp"
+                                    android:text="Cập nhật đơn ứng tuyển"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="4dp"
+                    android:orientation="horizontal"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

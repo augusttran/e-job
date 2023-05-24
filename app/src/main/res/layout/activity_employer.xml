@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.user.UserActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/employerCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardPreventCornerOverlap="true"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+            android:background="@color/white_grey"
+            app:strokeColor="@color/white_grey"
+            app:strokeWidth="0.7dp"
+            app:cardElevation="4dp">
+            <TextView
+                android:layout_gravity="right"
+                android:layout_marginStart="10dp"
+                android:id="@+id/displayEmailEmployer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="myEmail"
+                android:layout_marginEnd="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/endColor"
+                android:textSize="13sp">
+
+            </TextView>
+        </com.google.android.material.card.MaterialCardView>
+
+        <FrameLayout
+            android:id="@+id/fragment_container_employer"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:paddingBottom="40dp"
+            android:background="@drawable/gradient_bg"/>
+
+        <com.ismaeldivita.chipnavigation.ChipNavigationBar
+            android:id="@+id/menu2"
+            android:background="@color/white"
+            android:layout_alignBottom="@+id/fragment_container_employer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cnb_menuResource="@menu/bottom_menu2"
+            app:cnb_orientationMode="horizontal"
+            app:cnb_addBottomInset="false"
+            app:cnb_addLeftInset="false"
+            app:cnb_addRightInset="false"
+            app:cnb_addTopInset="false"
+            app:cnb_unselectedColor="@color/endColor"
+            app:cnb_badgeColor="@color/teal_200"
+            app:cnb_radius="16dp"
+            android:padding="2.5dp"
+            android:layout_marginBottom="0dp"
+            app:cnb_iconSize="18dp" />
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

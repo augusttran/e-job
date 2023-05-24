@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/green_effective"
+            app:elevation="0dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/Widget.AppCompat.Toolbar"
+                app:popupTheme="@style/Widget.AppCompat.Toolbar"
+                app:elevation="0dp"
+                app:layout_collapseMode="pin"
+                app:titleTextColor="@color/white"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:fillViewport="true"
+            app:layout_anchor="@id/appbar"
+            android:background="@drawable/bg_rounded_top"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_rounded_top">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="5dp"
+                    android:background="@color/light_gray"
+                    android:layout_marginTop="8dp"
+                    android:layout_centerHorizontal="true" />
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+<!--                        <com.google.android.material.card.MaterialCardView-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_marginTop="16sp"-->
+<!--                            android:layout_gravity="center_horizontal"-->
+<!--                            app:strokeWidth="0.5dp"-->
+<!--                            app:strokeColor="#f1f1f1"-->
+<!--                            app:cardElevation="0dp"-->
+<!--                            app:cardCornerRadius="8dp">-->
+
+<!--                            <ImageView-->
+<!--                                android:id="@+id/photoPreview"-->
+<!--                                android:scaleType="centerInside"-->
+<!--                                android:layout_margin="5dp"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent" />-->
+
+<!--                            <com.facebook.shimmer.ShimmerFrameLayout-->
+<!--                                android:id="@+id/imageProgress"-->
+<!--                                android:layout_width="160dp"-->
+<!--                                android:layout_height="160dp">-->
+
+
+<!--                                <View-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="match_parent"-->
+<!--                                    android:background="@color/text_gray"/>-->
+
+<!--                            </com.facebook.shimmer.ShimmerFrameLayout>-->
+
+<!--                        </com.google.android.material.card.MaterialCardView>-->
+
+                        <TextView
+                            android:id="@+id/titleJob"
+                            android:text="Job title"
+                            android:textColor="@color/text_gray"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="16sp"
+                            android:layout_marginEnd="16sp"
+                            android:gravity="center_horizontal"/>
+
+                        <TextView
+                            android:id="@+id/typeJob"
+                            android:text="SUBMITTED"
+                            android:textColor="@color/navy_100"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:paddingEnd="6dp"
+                            android:paddingStart="6dp"
+                            android:paddingBottom="2dp"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginStart="16sp"
+                            android:layout_marginEnd="16sp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/application_status_submitted"
+                            android:gravity="center_horizontal"/>
+
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginEnd="14dp"
+                            android:layout_marginTop="14dp"
+                            app:strokeWidth="0.5dp"
+                            app:strokeColor="#f1f1f1"
+                            app:cardElevation="0dp"
+                            app:cardCornerRadius="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_margin="16sp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="16dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="21dp"
+                                        android:layout_height="21dp"
+                                        android:src="@drawable/ic_baseline_person_24"
+                                        app:tint="@color/navy_100"/>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="Personal Information"
+                                        android:textColor="@color/navy_100"
+                                        android:textStyle="bold"
+                                        android:layout_marginStart="5dp"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:id="@+id/fullname"
+                                            android:layout_width="17dp"
+                                            android:layout_height="17dp"
+                                            android:src="@drawable/ic_baseline_person_outline_24"
+                                            app:tint="@color/text_gray"/>
+
+                                        <TextView
+                                            android:layout_toEndOf="@id/fullname"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="5dp"
+                                            android:text="Full Name"/>
+
+                                    </RelativeLayout>
+
+                                    <EditText
+                                        android:id="@+id/etFullname"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Enter Full name"
+                                        android:textColorHint="@color/light_gray"
+                                        android:textSize="12sp"
+                                        android:textColor="@color/grey_effective"/>
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:id="@+id/iconCompany"
+                                            android:layout_width="17dp"
+                                            android:layout_height="17dp"
+                                            android:src="@drawable/ic_baseline_school_24"
+                                            app:tint="@color/text_gray"/>
+
+                                        <TextView
+                                            android:layout_toEndOf="@id/iconCompany"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="5dp"
+                                            android:text="Education institution"/>
+
+                                    </RelativeLayout>
+
+                                    <EditText
+                                        android:id="@+id/etInsitution"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Enter your institution name"
+                                        android:textColorHint="@color/light_gray"
+                                        android:textSize="12sp"
+                                        android:textColor="@color/grey_effective"/>
+
+                                    <RelativeLayout
+                                        android:layout_marginTop="3dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:id="@+id/iconPhone"
+                                            android:layout_width="17dp"
+                                            android:layout_height="17dp"
+                                            android:layout_marginTop="2dp"
+                                            android:src="@drawable/common_full_open_on_phone"
+                                            app:tint="@color/text_gray"/>
+
+                                        <TextView
+                                            android:layout_toEndOf="@id/iconPhone"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="5dp"
+                                            android:text="Phone Number"/>
+
+                                    </RelativeLayout>
+
+                                    <EditText
+                                        android:id="@+id/etPersonalPhone"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Enter your phone number"
+                                        android:textColorHint="@color/light_gray"
+                                        android:textSize="12sp"
+                                        android:textColor="@color/grey_effective"/>
+
+                                    <RelativeLayout
+                                        android:layout_marginTop="3dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:id="@+id/iconLocation"
+                                            android:layout_width="17dp"
+                                            android:layout_height="17dp"
+                                            android:layout_marginTop="2dp"
+                                            android:src="@drawable/ic_baseline_location_on_24"
+                                            app:tint="@color/text_gray"/>
+
+                                        <TextView
+                                            android:layout_toEndOf="@id/iconLocation"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="5dp"
+                                            android:text="Personal Address"/>
+
+                                    </RelativeLayout>
+
+                                    <EditText
+                                        android:id="@+id/etPersonalAddress"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Enter your address"
+                                        android:textColorHint="@color/light_gray"
+                                        android:textSize="12sp"
+                                        android:textColor="@color/grey_effective"/>
+
+
+                                    <RelativeLayout
+                                        android:layout_marginTop="3dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:id="@+id/iconWebsite"
+                                            android:layout_width="17dp"
+                                            android:layout_height="17dp"
+                                            android:layout_marginTop="2dp"
+                                            android:src="@drawable/ic_baseline_alternate_email_24"
+                                            app:tint="@color/text_gray"/>
+
+                                        <TextView
+                                            android:layout_toEndOf="@id/iconWebsite"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="5dp"
+                                            android:text="Applicant Email "
+                                            android:textIsSelectable="true"/>
+
+                                    </RelativeLayout>
+
+                                    <EditText
+                                        android:id="@+id/etFacebook"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="User Email"
+                                        android:textColorHint="@color/light_gray"
+                                        android:textSize="12sp"
+                                        android:enabled="false"
+                                        android:editable="false"
+                                        android:textColor="@color/grey_effective"/>
+
+                                    <RelativeLayout
+                                        android:layout_marginTop="3dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:id="@+id/iconWebsite2"
+                                            android:layout_width="17dp"
+                                            android:layout_height="17dp"
+                                            android:layout_marginTop="2dp"
+                                            android:src="@drawable/ic_baseline_facebook_24"
+                                            app:tint="@color/text_gray"/>
+
+                                        <TextView
+                                            android:layout_toEndOf="@id/iconWebsite2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="5dp"
+                                            android:text="Social Media"
+                                            android:textIsSelectable="true"/>
+
+                                    </RelativeLayout>
+                                    <EditText
+                                        android:id="@+id/etSocialMedia"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Facebook, Instagram, Github"
+                                        android:textColorHint="@color/light_gray"
+                                        android:textSize="12sp"
+                                        android:editable="true"
+                                        android:enabled="true"
+                                        android:textColor="@color/grey_effective"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginEnd="14dp"
+                            android:layout_marginTop="14dp"
+                            app:strokeWidth="0.5dp"
+                            app:strokeColor="#f1f1f1"
+                            app:cardElevation="0dp"
+                            app:cardCornerRadius="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_margin="16sp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="16dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="21dp"
+                                        android:layout_height="21dp"
+                                        android:src="@drawable/ic_baseline_portrait_24"
+                                        app:tint="@color/navy_100"/>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="Tell us about You"
+                                        android:textColor="@color/navy_100"
+                                        android:textStyle="bold"
+                                        android:layout_marginStart="5dp"/>
+                                </LinearLayout>
+
+                                <EditText
+                                    android:id="@+id/etSelfDescription"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="What is your interest besides professional life"
+                                    android:textColorHint="@color/light_gray"
+                                    android:textSize="12sp"
+                                    android:maxLines="10"
+                                    android:textColor="@color/grey_effective"/>
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginEnd="14dp"
+                            android:layout_marginTop="14dp"
+                            app:strokeWidth="0.5dp"
+                            app:strokeColor="#f1f1f1"
+                            app:cardElevation="0dp"
+                            app:cardCornerRadius="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_margin="16sp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="16dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="21dp"
+                                        android:layout_height="21dp"
+                                        android:src="@drawable/ic_baseline_picture_as_pdf_24"
+                                        app:tint="@color/navy_100"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="Curriculum Vitae"
+                                        android:textColor="@color/navy_100"
+                                        android:textStyle="bold"
+                                        android:layout_marginStart="5dp"/>
+
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/pdfLinks"
+                                        android:text="Click icon to upload"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/text_gray"
+                                        android:textIsSelectable="true"/>
+                                    <ImageView
+                                        android:id="@+id/cvAttach"
+                                        android:clickable="true"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_alignParentEnd="true"
+
+                                        android:src="@drawable/ic_baseline_file_upload_24"/>
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tvAttachCV"
+                                        android:text="Click icon to attach this CV"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/text_gray"
+                                        android:textIsSelectable="true"/>
+                                    <ImageView
+                                        android:id="@+id/cvAttach2"
+                                        android:clickable="true"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_alignParentEnd="true"
+
+                                        android:src="@drawable/ic_baseline_attach_file_24"/>
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp" />
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/up_to_down"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/shadow_bottom_to_top"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+
+
+            <RelativeLayout
+                android:id="@+id/btnApply"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/btn_round_green_selector">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:text="Submit Application"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>

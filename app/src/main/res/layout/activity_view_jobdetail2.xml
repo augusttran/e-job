@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/tealPastel"
+            app:elevation="0dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:theme="@style/Widget.AppCompat.Toolbar"
+                app:elevation="0dp"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/Widget.AppCompat.Toolbar"
+                app:titleTextColor="@color/white" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:fillViewport="true"
+            app:layout_anchor="@id/appbar"
+            android:background="@drawable/bg_rounded_top"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_rounded_top">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="5dp"
+                    android:background="@color/light_gray"
+                    android:layout_marginTop="8dp"
+                    android:layout_centerHorizontal="true" />
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="16sp"
+                            android:layout_gravity="center_horizontal"
+                            app:strokeWidth="0.5dp"
+                            app:strokeColor="#f1f1f1"
+                            app:cardElevation="0dp"
+                            app:cardCornerRadius="8dp">
+
+                            <ImageView
+                                android:id="@+id/photoPreview"
+                                android:scaleType="centerInside"
+                                android:layout_margin="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                            <com.facebook.shimmer.ShimmerFrameLayout
+                                android:id="@+id/imageProgress"
+                                android:layout_width="160dp"
+                                android:layout_height="160dp">
+
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/text_gray"/>
+
+                            </com.facebook.shimmer.ShimmerFrameLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/tvJobTitle"
+                            android:text="Job title"
+                            android:textColor="@color/text_gray"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="16sp"
+                            android:layout_marginEnd="16sp"
+                            android:gravity="center_horizontal"/>
+
+                        <TextView
+                            android:id="@+id/tvEmpname"
+                            android:text="Employer name"
+                            android:textColor="@color/text_gray"
+                            android:textSize="14sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16sp"
+                            android:layout_marginEnd="16sp"
+                            android:gravity="center_horizontal"/>
+
+                        <TextView
+                            android:id="@+id/typeJob"
+                            android:text="Job type"
+                            android:textColor="@color/teal_700"
+                            android:textSize="14sp"
+                            android:paddingEnd="6dp"
+                            android:paddingStart="6dp"
+                            android:paddingBottom="2dp"
+                            android:paddingTop="2dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginStart="16sp"
+                            android:layout_marginEnd="16sp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/bg_job_type"
+                            android:gravity="center_horizontal"/>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginEnd="14dp"
+                            android:layout_marginTop="14dp"
+                            app:strokeWidth="0.5dp"
+                            app:strokeColor="#f1f1f1"
+                            app:cardElevation="0dp"
+                            app:cardCornerRadius="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_margin="16sp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="21dp"
+                                        android:layout_height="21dp"
+                                        android:src="@drawable/ic_baseline_info_24"
+                                        app:tint="@color/navy_100"/>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="Job Description"
+                                        android:textColor="@color/navy_100"
+                                        android:textStyle="bold"
+                                        android:layout_marginStart="5dp"/>
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/description"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/text_gray"
+                                    android:textIsSelectable="true"/>
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginEnd="14dp"
+                            android:layout_marginTop="14dp"
+                            app:strokeWidth="0.5dp"
+                            app:strokeColor="#f1f1f1"
+                            app:cardElevation="0dp"
+                            app:cardCornerRadius="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_margin="16sp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="21dp"
+                                        android:layout_height="21dp"
+                                        android:src="@drawable/ic_twotone_work_24"
+                                        app:tint="@color/navy_100"/>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:text="Company Information"
+                                        android:textColor="@color/navy_100"
+                                        android:textStyle="bold"
+                                        android:layout_marginStart="5dp"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:id="@+id/iconWebsite1"
+                                            android:layout_width="17dp"
+                                            android:layout_height="17dp"
+                                            android:layout_marginTop="2dp"
+                                            android:src="@drawable/ic_baseline_alternate_email_24"
+                                            app:tint="@color/text_gray"/>
+
+                                        <TextView
+                                            android:id="@+id/tvEmpEmail"
+                                            android:layout_toEndOf="@id/iconWebsite1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="5dp"
+                                            android:text="Employer Email"
+                                            android:textIsSelectable="true"/>
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_marginTop="3dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:id="@+id/iconCompany"
+                                            android:layout_width="17dp"
+                                            android:layout_height="17dp"
+                                            android:src="@drawable/ic_baseline_person_outline_24"
+                                            app:tint="@color/text_gray"/>
+
+                                        <TextView
+                                            android:id="@+id/tvVacancy"
+                                            android:layout_toEndOf="@id/iconCompany"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="5dp"
+                                            android:text="Number applicants needed"/>
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_marginTop="3dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:id="@+id/iconLocation"
+                                            android:layout_width="17dp"
+                                            android:layout_height="17dp"
+                                            android:layout_marginTop="2dp"
+                                            android:src="@drawable/ic_baseline_location_on_24"
+                                            app:tint="@color/text_gray"/>
+
+                                        <TextView
+                                            android:id="@+id/tvLocationDetail"
+                                            android:layout_toEndOf="@id/iconLocation"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="5dp"
+                                            android:text="Job Location"/>
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_marginTop="3dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:id="@+id/iconWebsite"
+                                            android:layout_width="17dp"
+                                            android:layout_height="17dp"
+                                            android:layout_marginTop="2dp"
+                                            android:src="@drawable/ic_baseline_attach_money_24"
+                                            app:tint="@color/text_gray"/>
+
+                                        <TextView
+                                            android:id="@+id/tvSalary"
+                                            android:layout_toEndOf="@id/iconWebsite"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="5dp"
+                                            android:text="Salary"
+                                            android:textIsSelectable="true"/>
+
+                                    </RelativeLayout>
+
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp" />
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/up_to_down"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/shadow_bottom_to_top"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+            <RelativeLayout
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="6dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_rounded_green_outline">
+
+                <ImageView
+                    android:id="@+id/btnMark"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/marked_24"
+                    app:tint="@color/green_effective"
+                    android:layout_centerInParent="true"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btnApply"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/btn_round_green_selector">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvApply"
+                        android:text="Apply"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:id="@+id/applyIcon"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_baseline_work_outline_24"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>

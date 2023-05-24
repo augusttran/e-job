@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.user.UserActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/fragment_container_employer"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:paddingBottom="40dp"
+            />
+
+        <com.ismaeldivita.chipnavigation.ChipNavigationBar
+            android:id="@+id/menu3"
+            android:background="@color/white_grey"
+            android:layout_alignBottom="@+id/fragment_container_employer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cnb_menuResource="@menu/bottom_menu_admin"
+            app:cnb_orientationMode="horizontal"
+            app:cnb_addBottomInset="false"
+            app:cnb_addLeftInset="false"
+            app:cnb_addRightInset="false"
+            app:cnb_addTopInset="false"
+            app:cnb_unselectedColor="@color/navy_100"
+            app:cnb_badgeColor="@color/green_effective"
+            android:padding="5dp"
+            app:cnb_radius="20dp"
+            app:cnb_iconSize="17dp" />
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

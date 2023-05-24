@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ejob">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <application
+        android:name=".eJobApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo_1"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo_1"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EJob">
+
+        <activity android:name=".ui.user.applications.ViewApplicationDetail"></activity>
+        <activity android:name=".ui.user.application.ViewJobDetail"></activity>
+        <activity android:name=".ui.employer.applications.ViewPdf"/>
+        <activity android:name=".ui.employer.ViewJobDetail2"/>
+        <activity android:name=".ui.user.pdf.UploadPdf" />
+        <activity android:name=".ui.login.LockedActivity" />
+        <activity android:name=".ui.employer.AddJob" />
+        <activity android:name=".ui.user.UserActivity" />
+        <activity android:name=".ui.employer.EmployerActivity" />
+        <activity android:name=".ui.admin.AdminActivity" />
+        <activity android:name=".ui.passwordrecover.ForgetPassActivity" />
+        <activity android:name=".ui.user.JobApplying" />
+        <activity android:name=".ui.register.RegisterEmployer" />
+        <activity android:name=".ui.register.RegisterUsr" />
+        <activity android:name=".ui.register.TransitRegister" />
+        <activity android:name=".ui.user.applications.ViewPdf"/>
+
+        <service android:name=".data.db.FetchingService" />
+
+        <activity android:name=".ui.login.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".fcm.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_baseline_check_24" />
+        <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/tealPastel" />
+
+    </application>
+
+</manifest>
